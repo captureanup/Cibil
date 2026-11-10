@@ -1,0 +1,1670 @@
+BUILDLABS — COMPLETE MASTER BLUEPRINT
+
+HARK-STYLE AI PERSONAL AGENT PLATFORM
+
+PRODUCT, ARCHITECTURE, DEVELOPMENT, SECURITY & LAUNCH SPECIFICATION
+
+PROJECT NAME: BUILDLABS
+PRODUCT TYPE: AI PERSONAL ASSISTANT + AUTONOMOUS AGENT PLATFORM
+PLATFORMS: WEB + ANDROID
+DEVELOPMENT ENVIRONMENT: GOOGLE AI STUDIO BUILD MODE
+PRODUCT VISION: HARK-STYLE PERSONAL AI OPERATING SYSTEM
+TARGET: PRODUCTION-READY, MODULAR, SCALABLE PLATFORM DESIGNED FOR LONG-TERM EXPANSION THROUGH 2030
+
+==================================================
+
+1. MASTER DEVELOPMENT INSTRUCTION
+   ==================================================
+
+Act as a senior product architect, principal full-stack engineer, AI systems engineer, Android engineer, cloud infrastructure engineer, cybersecurity engineer and UI/UX designer.
+
+Build an original, independent application named BUILDLABS.
+
+Buildlabs must provide the core capabilities of a modern personal AI agent platform similar in product scope to Hark. Do not copy Hark's proprietary code, logo, brand assets, private systems or exact interface.
+
+Create a real, functional, maintainable application, not merely a static prototype.
+
+MANDATORY RULES:
+
+1. Use modular, production-oriented architecture.
+2. Use TypeScript wherever practical.
+3. Build real working features and backend integrations.
+4. Never use fake success messages for unfinished functionality.
+5. Never expose API keys, private credentials or service-role keys in frontend code.
+6. All database operations must be authenticated and authorized.
+7. All AI tool calls must be validated and executed by trusted backend services.
+8. Implement error handling, loading states, empty states and recovery states.
+9. Add proper input validation, logging, monitoring and automated tests.
+10. Do not delete working features when adding new functionality.
+11. Maintain a README, setup instructions, architecture documentation and environment-variable template.
+12. Keep the application responsive on Android phones, tablets and desktop browsers.
+13. Implement features incrementally and verify each development phase before continuing.
+14. Do not invent external API integrations or claim that an account is connected without successful authentication.
+15. Where external credentials are unavailable, create a clearly labelled integration setup flow and a development-only mock adapter. Never represent a mock as a live connection.
+16. Do not report an APK, deployment, integration or test as complete unless its actual result has been verified.
+
+==================================================
+02. PRODUCT IDENTITY AND BRANDING
+
+Official name: BUILDLABS
+
+Product description:
+Buildlabs is an intelligent personal AI assistant that understands user context, remembers useful information, operates authorized computer environments, connects external services and executes approved tasks.
+
+Brand personality:
+
+- Intelligent
+- Professional
+- Minimal
+- Reliable
+- Secure
+- Futuristic
+- Human-friendly
+
+Suggested tagline:
+"Intelligence That Gets Things Done."
+
+Create:
+
+- Original Buildlabs logo
+- Application icon
+- Splash screen
+- Favicon
+- Web app metadata
+- Android app icon
+- Brand color tokens
+- Typography system
+- Light theme
+- Dark theme
+
+Use original branding and do not imitate Hark's logo or copyrighted artwork.
+
+==================================================
+03. COMPLETE PRODUCT EXPERIENCE
+
+Build three primary application experiences:
+
+A. HOME
+B. CHAT
+C. PROJECTS
+
+Additional capabilities must be accessible through navigation, menus, panels and relevant contextual actions.
+
+PRIMARY NAVIGATION:
+
+- Home
+- Chat
+- Projects
+- Actions
+- Panels
+- Specialties
+- Scheduled Tasks
+- Integrations
+- Handoff
+- Vault
+- Notifications
+- Settings
+
+DESKTOP UI:
+
+- Left navigation sidebar
+- Main workspace
+- Contextual right panel
+- Responsive chat composer
+- Global command/search interface
+
+ANDROID UI:
+
+- Mobile-first layout
+- Bottom navigation
+- Responsive cards
+- Expandable menus
+- Touch-friendly controls
+- Native back navigation
+- Safe-area support
+- Keyboard-aware chat interface
+
+==================================================
+04. HOME DASHBOARD
+
+Build a personalized Home dashboard.
+
+Components:
+
+1. Personalized greeting.
+2. Current date and local time.
+3. Main AI assistant entry point.
+4. Recommended actions.
+5. Action Cards.
+6. Custom Panels.
+7. Scheduled Tasks summary.
+8. Recent conversations.
+9. Active Projects.
+10. Running Handoff sessions.
+11. Notifications.
+12. Daily activity summary.
+13. Connected services status.
+14. Usage and task status.
+15. Quick-create buttons.
+
+ACTION CARDS:
+
+AI-generated actionable cards with:
+
+- Title
+- Description
+- Source
+- Priority
+- Deadline, when applicable
+- Action button
+- Review option
+- Dismiss option
+- Execution status
+- Activity history
+
+Examples:
+
+- Draft an email.
+- Prepare a calendar event.
+- Review an upcoming deadline.
+- Continue an unfinished project.
+- Check an order status.
+
+Do not execute sensitive operations merely because an Action Card is displayed. Require the appropriate user approval.
+
+==================================================
+05. AI CHAT SYSTEM
+
+Create an advanced conversational AI interface.
+
+Requirements:
+
+- Persistent chat history
+- One main personal conversation
+- Separate project conversations
+- Streaming AI responses
+- Markdown rendering
+- Code blocks
+- Syntax highlighting
+- Copy buttons
+- File attachments
+- PDF and document processing
+- Image understanding
+- Conversation search
+- Message editing
+- Regenerate response
+- Stop generation
+- Retry failed requests
+- Conversation timestamps
+- Tool execution status
+- Task progress display
+- Approval prompts
+- Context-aware replies
+- Conversation export and deletion
+
+CHAT COMPOSER:
+
+- Text input
+- File upload
+- Image upload
+- Voice input
+- Send button
+- Stop button
+- Attachment previews
+- Tool availability indicator
+
+The interface must clearly distinguish:
+
+- AI thinking/planning
+- Tool execution
+- User approval required
+- Completed action
+- Failed action
+- Action awaiting external response
+
+==================================================
+06. AI BRAIN AND AGENT ORCHESTRATION
+
+Primary AI provider:
+Google Gemini API.
+
+Use the official Google GenAI SDK from secure server-side code.
+
+Implement a provider abstraction so additional AI models can be integrated later without rewriting the entire application.
+
+AI SYSTEM COMPONENTS:
+
+1. Model Gateway
+2. Conversation Manager
+3. Context Builder
+4. User Profile Resolver
+5. Memory Retrieval Engine
+6. Agent Planner
+7. Tool Registry
+8. Tool Permission Manager
+9. Tool Execution Engine
+10. Result Validator
+11. Response Generator
+12. Usage Meter
+13. Safety and Policy Engine
+
+AGENT EXECUTION FLOW:
+
+User Request
+→ Authentication
+→ Permission Check
+→ Context Retrieval
+→ Memory Retrieval
+→ AI Planning
+→ Tool Selection
+→ Argument Validation
+→ Approval Check
+→ Backend Execution
+→ Result Verification
+→ AI Final Response
+→ Conversation Storage
+→ Activity Audit
+
+Use Gemini function calling for requesting external actions.
+
+Important:
+The model may propose a function call, but it must never execute privileged operations directly. The trusted backend must validate the function name, user identity, arguments, permissions and approval requirements before executing it.
+
+Implement:
+
+- Maximum tool-call count
+- Per-task timeouts
+- Usage limits
+- Retry policies
+- Idempotency keys
+- Tool execution logs
+- Cancellation support
+- Failure recovery
+- Cost tracking
+- Model fallback configuration
+
+Never allow an unbounded agent execution loop.
+
+==================================================
+07. LONG-TERM MEMORY ENGINE
+
+Create an editable and user-controlled memory system.
+
+MEMORY TYPES:
+
+1. Profile Memory
+2. Preference Memory
+3. Communication Style Memory
+4. Personal Context Memory
+5. Project Memory
+6. Task Memory
+7. Historical Conversation Memory
+8. Important Decision Memory
+9. User-approved Facts
+10. Temporary Context
+
+MEMORY FEATURES:
+
+- Automatic candidate extraction
+- User-approved memory creation
+- Semantic search
+- Vector embeddings
+- Context retrieval
+- Memory ranking
+- Duplicate detection
+- Memory expiration
+- Memory editing
+- Memory deletion
+- Memory search
+- Source references
+- Export memory
+- Clear all personal memories
+
+Use PostgreSQL with pgvector.
+
+Every memory record must have:
+
+- User ID
+- Memory category
+- Memory content
+- Source reference
+- Creation timestamp
+- Updated timestamp
+- Confidence
+- Retention policy
+- User approval status
+
+Never treat an AI-generated assumption as a verified user fact.
+
+Users must be able to inspect, correct and delete stored memories.
+
+Do not use private user data for model training without explicit, separate consent.
+
+==================================================
+08. PROJECT WORKSPACE
+
+Create dedicated Projects for long-running work.
+
+PROJECT FEATURES:
+
+- New project
+- Project description
+- Project-specific AI context
+- Dedicated chat thread
+- Files and documents
+- Notes
+- Goals
+- Tasks
+- Decisions
+- Progress tracking
+- Milestones
+- Activity timeline
+- Project search
+- Archive
+- Restore
+- Delete
+- Export
+
+Each project must maintain separate context and access permissions.
+
+The assistant should understand the project's previous conversations, decisions and uploaded files when authorized.
+
+==================================================
+09. CLOUD COMPUTER AND HANDOFF AGENT
+
+Build an advanced cloud computer environment.
+
+This is one of the most important modules of Buildlabs.
+
+Handoff must operate inside an isolated, authorized computer environment.
+
+CORE COMPONENTS:
+
+- Dedicated browser session
+- Chromium
+- Playwright
+- Browser navigation
+- Page interaction
+- Form filling
+- Screenshot capture
+- Page inspection
+- File downloads
+- File uploads
+- Session state management
+- Browser task history
+- Execution progress
+- User takeover
+- Pause and resume
+- Cancellation
+- Task result reporting
+
+SUPPORTED TASK CATEGORIES:
+
+- Web research
+- Website navigation
+- Filling authorized forms
+- Preparing online applications
+- Managing authorized accounts
+- Researching products
+- Organizing documents
+- Building websites
+- Collecting public information
+- Completing user-approved online workflows
+
+HANDOFF EXECUTION:
+
+1. Receive user request.
+2. Identify required website and task.
+3. Classify risk.
+4. Verify permissions.
+5. Create isolated browser session.
+6. Navigate to the website.
+7. Inspect page state.
+8. Plan the next action.
+9. Execute approved actions.
+10. Capture and verify results.
+11. Continue until completion or a blocker occurs.
+12. Ask user for assistance when needed.
+13. Report actual results.
+
+SECURITY:
+
+- One isolated execution environment per task or appropriately isolated session.
+- No access to unauthorized local files.
+- Restrict internal network access and cloud metadata endpoints.
+- Prevent SSRF and unsafe URL access.
+- Validate downloads.
+- Apply network egress controls.
+- Do not log credentials.
+- Do not expose secrets to the model.
+- Do not bypass CAPTCHA, MFA or website security restrictions.
+- Pause for user takeover when authentication requires it.
+- Stop immediately when user cancels a task.
+
+HIGH-RISK ACTION APPROVAL:
+
+Always require explicit confirmation before:
+
+- Sending an email
+- Making a purchase
+- Booking or confirming a reservation
+- Making a payment
+- Transferring money
+- Publishing content
+- Submitting legally significant forms
+- Deleting important data
+- Changing security settings
+
+Show the user the intended action, target and relevant details before approval.
+
+Approval must be task-specific, time-limited and recorded in the audit log.
+
+Never claim an operation succeeded unless its result is independently verified.
+
+==================================================
+10. ACTION BUTTON ENGINE
+
+Create dynamic Action Buttons.
+
+Capabilities:
+
+- AI-generated suggestions
+- User-created actions
+- Context-aware actions
+- Priority sorting
+- One-tap execution for low-risk operations
+- Approval workflow for sensitive actions
+- Action history
+- Retry
+- Cancel
+- Dismiss
+- Completion status
+
+Support reusable action templates.
+
+==================================================
+11. CUSTOM PANELS AND MINI APPLICATION BUILDER
+
+Allow users to request custom mini-applications through natural language.
+
+Examples:
+
+- Daily planner
+- Expense tracker
+- Habit tracker
+- Project tracker
+- Research dashboard
+- Workout tracker
+- Reading tracker
+- Task dashboard
+
+PANEL ENGINE:
+
+Natural Language Request
+→ Component Specification
+→ JSON Schema Validation
+→ Approved Component Renderer
+→ Saved Panel
+→ User Interaction
+→ Data Update
+
+Use a predefined, secure component library.
+
+Supported components:
+
+- Cards
+- Lists
+- Tables
+- Charts
+- Buttons
+- Forms
+- Progress indicators
+- Calendar views
+- Text blocks
+- Filters
+
+Do not execute arbitrary model-generated JavaScript in the application.
+
+Panels must support editing, duplication, deletion and project association.
+
+==================================================
+12. SPECIALTIES / REUSABLE WORKFLOWS
+
+Build a reusable workflow system.
+
+A Specialty represents a repeatable multi-step task.
+
+Features:
+
+- Create Specialty
+- Name and description
+- Input variables
+- Step definitions
+- Tool requirements
+- Permission requirements
+- Approval requirements
+- Workflow execution
+- Version history
+- Test execution
+- Edit
+- Duplicate
+- Archive
+- Delete
+
+Examples:
+
+- Weekly research report
+- Email preparation workflow
+- Project status summary
+- Document analysis
+- Customer support preparation
+- Repeated website research
+
+Every workflow must validate permissions at execution time.
+
+==================================================
+13. SCHEDULED TASKS AND AUTOMATIONS
+
+Build a proper background scheduling engine.
+
+Features:
+
+- One-time tasks
+- Daily tasks
+- Weekly tasks
+- Monthly tasks
+- Custom daily-and-above intervals
+- Timezone-aware scheduling
+- Task reminders
+- Recurring summaries
+- Scheduled research
+- Scheduled project updates
+- Notifications
+- Pause
+- Resume
+- Edit
+- Delete
+- Execution history
+
+ARCHITECTURE:
+
+Scheduler
+→ Job Queue
+→ Background Worker
+→ Permission Validation
+→ Task Execution
+→ Result Verification
+→ Notification
+→ Execution Log
+
+Use a reliable queue system such as Redis/Valkey with BullMQ.
+
+Implement:
+
+- Idempotent jobs
+- Retry limits
+- Dead-letter handling
+- Duplicate prevention
+- Worker monitoring
+- Failure alerts
+- Cancellation
+- Timezone correctness
+
+Do not run long-running tasks inside an ordinary web request.
+
+==================================================
+14. INTEGRATION CENTER
+
+Create a secure integrations marketplace.
+
+PRIORITY INTEGRATIONS:
+
+GOOGLE WORKSPACE:
+
+- Google login
+- Gmail
+- Google Calendar
+- Google Drive
+- Google Docs
+- Google Sheets
+
+MICROSOFT:
+
+- Microsoft login
+- Outlook
+- Microsoft Calendar
+- OneDrive
+- Microsoft 365
+
+FUTURE INTEGRATIONS:
+
+- Slack
+- Notion
+- GitHub
+- GitLab
+- Dropbox
+- Trello
+- Other services through authorized APIs
+
+Each integration must have:
+
+- Connect
+- OAuth authorization
+- Minimum required scopes
+- Connection status
+- Token refresh
+- Disconnect
+- Revoke access
+- Error reporting
+- Permission management
+
+Use OAuth 2.0 authorization-code flow with PKCE wherever supported.
+
+Store refresh tokens encrypted on the server.
+
+Never request users to paste passwords or OAuth client secrets into chat.
+
+Do not claim an integration is connected until its authentication and verification steps succeed.
+
+==================================================
+15. SECURITY VAULT
+
+Build a secure encrypted Vault.
+
+SUPPORTED DATA:
+
+- Website credentials
+- API credentials
+- Secure notes
+- Connection references
+- User-approved automation credentials
+
+SECURITY REQUIREMENTS:
+
+- Strong encryption at rest
+- TLS for data in transit
+- Envelope encryption
+- KMS-managed master encryption keys
+- Per-user or per-record data encryption keys
+- Strict authorization
+- Secure credential access
+- Credential rotation
+- Access logs
+- Session expiration
+- MFA support
+- Data deletion
+- Backup protection
+
+Keep decrypted credentials out of ordinary AI prompts, frontend state, analytics and application logs.
+
+Only authorized backend components may access credentials for a specific approved task.
+
+Do not describe server-side encryption as end-to-end encryption unless true end-to-end encryption is separately implemented and verified.
+
+==================================================
+16. AUTHENTICATION AND USER MANAGEMENT
+
+Use Supabase Auth.
+
+Authentication methods:
+
+- Email authentication
+- Email OTP
+- Google OAuth
+- Secure session management
+- Password reset
+- Session revocation
+- MFA support
+- Account deletion
+
+USER MANAGEMENT:
+
+- User profile
+- Avatar
+- Preferences
+- Language
+- Timezone
+- Notifications
+- Connected accounts
+- AI usage
+- Subscription state
+- Privacy controls
+
+Plan for:
+
+- Free tier
+- Paid tier
+- Usage-based limits
+- Future team accounts
+
+Do not implement payments until a compliant payment provider and billing flow are configured.
+
+==================================================
+17. DATABASE ARCHITECTURE
+
+Use Supabase PostgreSQL and pgvector.
+
+Create normalized tables with migrations.
+
+CORE TABLES:
+
+1. users_profiles
+2. user_preferences
+3. projects
+4. conversations
+5. messages
+6. message_attachments
+7. memories
+8. memory_sources
+9. embeddings
+10. integrations
+11. oauth_credentials
+12. action_cards
+13. panels
+14. panel_data
+15. specialties
+16. specialty_versions
+17. scheduled_tasks
+18. task_runs
+19. handoff_sessions
+20. handoff_events
+21. approval_requests
+22. vault_items
+23. notifications
+24. audit_events
+25. usage_records
+26. subscriptions
+27. feedback_reports
+
+DATABASE RULES:
+
+- UUID primary keys
+- Correct foreign keys
+- Created and updated timestamps
+- Database indexes
+- Transactional updates
+- Row Level Security
+- User-specific access policies
+- Storage access restrictions
+- Migration versioning
+- Backup and recovery plan
+
+Never rely only on frontend authorization.
+
+==================================================
+18. BACKEND AND API ARCHITECTURE
+
+Use Node.js LTS, TypeScript and Express.
+
+Separate services into modules:
+
+- Auth service
+- User service
+- Chat service
+- AI orchestration service
+- Memory service
+- Project service
+- File service
+- Integration service
+- Action service
+- Panel service
+- Specialty service
+- Scheduler service
+- Handoff service
+- Vault service
+- Notification service
+- Usage service
+- Admin service
+
+Create versioned REST APIs.
+
+Suggested endpoints:
+
+POST /api/v1/chat
+GET /api/v1/conversations
+GET /api/v1/conversations/:id
+POST /api/v1/projects
+GET /api/v1/projects
+POST /api/v1/memories
+GET /api/v1/memories
+DELETE /api/v1/memories/:id
+POST /api/v1/handoff
+GET /api/v1/handoff/:id
+POST /api/v1/handoff/:id/approve
+POST /api/v1/handoff/:id/cancel
+POST /api/v1/automations
+GET /api/v1/automations
+POST /api/v1/integrations/:provider/connect
+POST /api/v1/integrations/:provider/disconnect
+POST /api/v1/actions/:id/execute
+POST /api/v1/panels
+POST /api/v1/specialties
+GET /api/v1/notifications
+
+Implement:
+
+- Request validation
+- Authentication middleware
+- Authorization middleware
+- Rate limiting
+- CORS restrictions
+- CSRF protection where applicable
+- Structured error responses
+- Request IDs
+- API versioning
+- Pagination
+- Audit logging
+
+Use Server-Sent Events or a suitable streaming transport for real-time chat updates.
+
+==================================================
+19. FILE AND DOCUMENT SYSTEM
+
+Support:
+
+- PDF
+- DOCX
+- TXT
+- CSV
+- XLSX
+- Images
+- Supported audio formats
+
+Capabilities:
+
+- Upload
+- Secure storage
+- File type validation
+- File size limits
+- Malware scanning
+- Text extraction
+- Document summaries
+- Search
+- Project attachment
+- AI analysis
+- Download
+- Delete
+
+Use object storage with signed URLs.
+
+Do not make private documents publicly accessible.
+
+==================================================
+20. NOTIFICATION SYSTEM
+
+Implement:
+
+- In-app notifications
+- Android push notifications
+- Scheduled reminders
+- Task completion notifications
+- Approval notifications
+- Failure notifications
+- Integration alerts
+
+Use Firebase Cloud Messaging for Android push notifications.
+
+Allow users to configure notification preferences.
+
+Never include passwords, access tokens or other sensitive secrets in notification payloads.
+
+==================================================
+21. UI/UX DESIGN SYSTEM
+
+Create an original premium interface.
+
+DESIGN DIRECTION:
+
+- Minimalist
+- Modern
+- Premium
+- Professional
+- Responsive
+- Elegant animations
+- Clear visual hierarchy
+- Accessible controls
+
+Suggested design tokens:
+
+- Dark navy background
+- Neutral grey surfaces
+- White primary text
+- Subtle blue/violet accent
+- Clear success, warning and error states
+
+Typography:
+Use a clean, highly readable sans-serif font.
+
+Components:
+
+- Sidebar
+- Top navigation
+- Chat interface
+- Cards
+- Drawers
+- Dialogs
+- Tool execution status
+- Progress bars
+- Tables
+- Panels
+- Forms
+- Notifications
+- Settings screens
+
+Design requirements:
+
+- Consistent spacing
+- Responsive grid
+- Accessible contrast
+- Keyboard navigation
+- Focus states
+- Screen-reader labels
+- Loading skeletons
+- Empty states
+- Error recovery
+- Reduced-motion support
+
+Do not sacrifice usability for visual effects.
+
+==================================================
+22. TECHNICAL STACK — FINAL DECISIONS
+
+FRONTEND:
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Component-based design system
+
+MOBILE:
+
+- Capacitor
+- Android native project
+- Kotlin bridge when native functionality requires it
+
+BACKEND:
+
+- Node.js LTS
+- TypeScript
+- Express
+- REST API
+- Server-Sent Events
+
+AI:
+
+- Google Gemini API
+- Google GenAI SDK
+- Function calling
+- Structured outputs
+- Provider adapter architecture
+
+DATABASE:
+
+- Supabase PostgreSQL
+- pgvector
+- Supabase Auth
+- Supabase Storage
+- Row Level Security
+
+BACKGROUND PROCESSING:
+
+- Redis-compatible queue
+- BullMQ
+- Scheduler
+- Independent workers
+
+BROWSER AUTOMATION:
+
+- Playwright
+- Chromium
+- Isolated cloud execution environments
+
+DEPLOYMENT:
+
+- Render
+- Supabase
+- Managed object storage
+- Secure secret management
+- Custom domain
+
+MONITORING:
+
+- Sentry
+- Structured logs
+- Health checks
+- Metrics
+- Usage monitoring
+
+SOURCE CONTROL:
+
+- GitLab or GitHub
+- Git-based version history
+- Protected main branch
+- Feature branches
+- Pull request reviews
+- CI/CD
+
+==================================================
+23. RECOMMENDED SOURCE CODE STRUCTURE
+
+Create a maintainable monorepo:
+
+buildlabs/
+|
+|-- apps/
+|   |-- web/
+|   |-- mobile/
+|   |-- api/
+|   |-- worker/
+|   |-- browser-worker/
+|
+|-- packages/
+|   |-- shared/
+|   |-- types/
+|   |-- schemas/
+|   |-- ui/
+|   |-- api-client/
+|   |-- agent-tools/
+|
+|-- infrastructure/
+|   |-- render/
+|   |-- database/
+|   |-- deployment/
+|   |-- monitoring/
+|
+|-- docs/
+|   |-- architecture/
+|   |-- api/
+|   |-- security/
+|   |-- deployment/
+|   |-- user-guide/
+|
+|-- tests/
+|   |-- unit/
+|   |-- integration/
+|   |-- e2e/
+|   |-- security/
+|
+|-- scripts/
+|-- .env.example
+|-- .gitignore
+|-- README.md
+|-- package.json
+|-- pnpm-workspace.yaml
+
+Adjust the actual structure to the capabilities of the selected build environment, but keep frontend, backend, workers and shared types logically separated.
+
+==================================================
+24. ENVIRONMENT CONFIGURATION
+
+Create a complete .env.example containing variable names and safe placeholders only.
+
+Examples:
+
+NODE_ENV=
+PORT=
+APP_URL=
+API_BASE_URL=
+
+GEMINI_API_KEY=
+
+SUPABASE_URL=
+SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
+DATABASE_URL=
+
+REDIS_URL=
+
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GOOGLE_REDIRECT_URI=
+
+MICROSOFT_CLIENT_ID=
+MICROSOFT_CLIENT_SECRET=
+MICROSOFT_REDIRECT_URI=
+
+KMS_KEY_ID=
+
+FCM_PROJECT_ID=
+FCM_SERVICE_ACCOUNT=
+
+SENTRY_DSN=
+
+Never commit actual secrets.
+
+Never put service-role keys, OAuth client secrets, private signing keys or KMS credentials in client-side code or the Android APK.
+
+==================================================
+25. DEPLOYMENT ARCHITECTURE
+
+WEB DEPLOYMENT:
+
+Deploy the web application through a production hosting environment.
+
+BACKEND:
+
+Deploy API as an independent web service.
+
+WORKERS:
+
+Deploy independent background workers.
+
+BROWSER EXECUTION:
+
+Run browser automation in separately isolated execution environments. Do not run arbitrary browser sessions inside the public API process.
+
+DATABASE:
+
+Use managed Supabase PostgreSQL with backups and access policies.
+
+QUEUE:
+
+Use managed Redis-compatible infrastructure.
+
+STORAGE:
+
+Use private object storage.
+
+DOMAIN:
+
+Configure:
+
+- Main application domain
+- API subdomain
+- TLS certificate
+- HTTPS redirects
+- Secure headers
+- DNS configuration
+
+PRODUCTION REQUIREMENTS:
+
+- Environment-specific configuration
+- Health endpoints
+- Database migrations
+- Rollback strategy
+- Deployment logs
+- Automated backup checks
+- Error monitoring
+- Resource limits
+- Scaling plan
+
+Do not publish a production URL until authentication, authorization, database security and critical workflows pass their release checks.
+
+==================================================
+26. ANDROID APP BUILD
+
+Create an Android application using Capacitor.
+
+Application name:
+Buildlabs
+
+Application ID:
+com.buildlabs.ai
+
+Display name:
+Buildlabs
+
+Requirements:
+
+- Android application icon
+- Splash screen
+- Adaptive icon
+- Status bar configuration
+- Deep links
+- Push notifications
+- Network error handling
+- File upload/download support
+- Safe-area compatibility
+- Keyboard handling
+- Secure authentication storage
+- Native back button handling
+
+Build process:
+
+1. Build and test the web frontend.
+2. Generate the production web bundle.
+3. Configure Capacitor.
+4. Add Android platform.
+5. Sync web assets.
+6. Open Android project in Android Studio.
+7. Configure signing.
+8. Build debug APK.
+9. Test on real Android devices.
+10. Generate signed release APK.
+11. Generate signed Android App Bundle.
+12. Verify installation and launch.
+
+Never commit the Android signing keystore or passwords.
+
+Maintain secure backups of the signing materials.
+
+==================================================
+27. SECURITY AND PRIVACY FRAMEWORK
+
+Implement a defense-in-depth security architecture.
+
+Mandatory:
+
+- TLS
+- Server-side secrets
+- Secure session management
+- Password protection
+- MFA support
+- OAuth scope minimization
+- RLS
+- Input validation
+- Output encoding
+- SQL injection prevention
+- XSS protection
+- CSRF protection where applicable
+- SSRF protection
+- Rate limiting
+- Brute-force protection
+- File upload validation
+- Malware scanning
+- Encryption at rest
+- Encryption in transit
+- Key rotation
+- Audit trails
+- Database backups
+- Data deletion workflow
+- Data export workflow
+- Incident response procedures
+
+AI SECURITY:
+
+- Treat webpage and file contents as untrusted input.
+- Protect against prompt injection.
+- Separate instructions from retrieved content.
+- Do not allow retrieved content to grant permissions.
+- Require backend authorization for every sensitive tool.
+- Prevent model-generated SQL from executing directly.
+- Do not give unrestricted shell access to the model.
+- Maintain tool allowlists.
+- Record privileged actions.
+
+Create a documented threat model before production launch.
+
+==================================================
+28. TESTING AND QUALITY ASSURANCE
+
+UNIT TESTING:
+
+- Utility functions
+- Business logic
+- Validation schemas
+- Authorization policies
+- Memory retrieval
+
+INTEGRATION TESTING:
+
+- Authentication
+- Database
+- Gemini API
+- OAuth
+- File storage
+- Queue
+- Browser worker
+- Notifications
+
+END-TO-END TESTING:
+
+- Registration
+- Login
+- Chat
+- Project creation
+- Memory editing
+- Integration setup
+- Task scheduling
+- Handoff approval
+- Vault access
+- Logout
+- Account deletion
+
+ANDROID TESTING:
+
+- Installation
+- Startup
+- Login
+- Navigation
+- Keyboard
+- File selection
+- Push notification
+- Deep links
+- Network interruption
+- Background/resume
+
+SECURITY TESTING:
+
+- RLS verification
+- Unauthorized API access
+- Cross-user access attempts
+- Token exposure checks
+- Dependency scanning
+- Secret scanning
+- File upload abuse
+- SSRF testing
+- Prompt injection testing
+
+PERFORMANCE TESTING:
+
+- Concurrent chat requests
+- Streaming stability
+- Database performance
+- Background queue throughput
+- Browser worker limits
+- Slow network behavior
+
+Every critical issue must be fixed or explicitly documented before launch.
+
+==================================================
+29. ADMIN AND OBSERVABILITY DASHBOARD
+
+Create a restricted administrative dashboard.
+
+Show:
+
+- Registered users
+- Active users
+- Application health
+- API errors
+- Worker status
+- Queue depth
+- AI usage
+- Estimated AI cost
+- Storage usage
+- Integration errors
+- Task failure rates
+- Security alerts
+- Release information
+
+Admin permissions must be separate from normal user permissions.
+
+Never expose one user's private messages or Vault contents through ordinary operational analytics.
+
+==================================================
+30. USAGE, BILLING AND COST MANAGEMENT
+
+Prepare for future monetization.
+
+Usage tracking:
+
+- AI requests
+- Input tokens
+- Output tokens
+- Browser execution time
+- File storage
+- Scheduled executions
+- Integration usage
+
+Plan structure:
+
+- Free
+- Pro
+- Advanced
+
+Implement configurable usage limits.
+
+Do not hardcode outdated model prices.
+
+Track costs through provider-reported usage and current billing information.
+
+Add warnings before usage limits are exceeded.
+
+Payments must use a properly integrated payment provider and explicit user confirmation.
+
+==================================================
+31. INTERNATIONALIZATION AND ACCESSIBILITY
+
+Initial languages:
+
+- English
+- Hindi
+
+Prepare for future languages.
+
+Requirements:
+
+- Translation files
+- Timezone awareness
+- Localized dates
+- Currency formatting
+- Accessible labels
+- Keyboard support
+- Screen-reader support
+- Readable font sizes
+- High contrast
+- Reduced motion
+
+==================================================
+32. DEVELOPMENT PHASES
+
+PHASE 0 — FOUNDATION
+
+- Repository
+- Architecture
+- Build configuration
+- Design system
+- Environment configuration
+
+PHASE 1 — CORE APPLICATION
+
+- Authentication
+- Home
+- Chat
+- Projects
+- Database
+- Responsive design
+
+PHASE 2 — AI BRAIN
+
+- Gemini integration
+- Streaming
+- Agent loop
+- Function calling
+- Tool permission system
+
+PHASE 3 — MEMORY
+
+- Memory extraction
+- Vector search
+- Memory management
+- Project context
+
+PHASE 4 — CONNECTORS
+
+- Google OAuth
+- Gmail
+- Calendar
+- Drive
+- Microsoft integrations
+
+PHASE 5 — CLOUD HANDOFF
+
+- Isolated computer
+- Browser worker
+- Playwright
+- Approval workflow
+- User takeover
+
+PHASE 6 — ACTIONS AND PERSONALIZATION
+
+- Action Cards
+- Panels
+- Mini-app builder
+- Specialties
+
+PHASE 7 — AUTOMATIONS
+
+- Queue
+- Scheduler
+- Background jobs
+- Push notifications
+
+PHASE 8 — VAULT AND SECURITY
+
+- Encryption
+- Credential access
+- MFA
+- Security audits
+
+PHASE 9 — WEB DEPLOYMENT
+
+- Production backend
+- Database
+- Domain
+- Monitoring
+- Backups
+
+PHASE 10 — ANDROID
+
+- Capacitor integration
+- Android project
+- Debug APK
+- Release APK
+- AAB
+
+PHASE 11 — FINAL QA AND LAUNCH
+
+- Full regression testing
+- Security review
+- Performance review
+- Privacy policy
+- Terms of service
+- Play Store materials
+- Release documentation
+
+==================================================
+33. DEFINITION OF DONE
+
+A feature is complete only after:
+
+1. Its frontend works.
+2. Its backend logic works.
+3. Its database integration works.
+4. Authentication is enforced.
+5. Authorization is verified.
+6. Error handling works.
+7. Loading and empty states work.
+8. Tests pass.
+9. Documentation is updated.
+10. The feature works on supported screen sizes.
+
+The overall application is not launch-ready until:
+
+- Web app builds successfully.
+- Backend starts successfully.
+- Database migrations succeed.
+- User isolation is verified.
+- AI chat works with a real configured provider.
+- Memory can be managed by users.
+- Projects persist correctly.
+- Sensitive actions require appropriate approvals.
+- Connected integrations authenticate successfully.
+- Handoff works in an isolated authorized environment.
+- Vault encryption and access controls pass testing.
+- Scheduled jobs execute reliably.
+- Android APK installs and starts.
+- Signed AAB is verified.
+- Privacy policy and terms are accessible.
+- Production monitoring is active.
+- Backup and recovery are tested.
+
+==================================================
+34. GOOGLE AI STUDIO BUILD INSTRUCTIONS
+
+Use Google AI Studio Build mode to construct the application.
+
+Start by generating the complete project foundation.
+
+Do not try to create every complex subsystem as a fake visual demo.
+
+Follow this sequence:
+
+FIRST:
+Create the project structure, Buildlabs branding, responsive interface, navigation, authentication-ready screens and database integration.
+
+SECOND:
+Implement a working AI chat using the secure server-side Gemini integration.
+
+THIRD:
+Implement persistent conversations, Projects and Memory.
+
+FOURTH:
+Implement tool calling and the backend permission engine.
+
+FIFTH:
+Implement integrations and Action Cards.
+
+SIXTH:
+Implement the isolated Handoff architecture.
+
+SEVENTH:
+Implement Panels, Specialties and Scheduled Tasks.
+
+EIGHTH:
+Implement encrypted Vault and full security checks.
+
+NINTH:
+Prepare production deployment.
+
+TENTH:
+Prepare and test the Capacitor Android application.
+
+For every phase:
+
+- Generate actual source files.
+- Show the files created or changed.
+- Run available build and test commands.
+- Fix compiler errors.
+- Fix runtime errors.
+- Verify integrations.
+- Maintain backward compatibility.
+- Update documentation.
+- Identify any external configuration still required.
+
+Do not claim completion when a feature is only a placeholder.
+
+If an external service is unavailable, clearly document the blocker and provide a safe adapter interface rather than pretending the integration works.
+
+==================================================
+35. FINAL PRODUCT GOAL
+
+BUILDLABS must evolve into an independent personal AI operating system.
+
+Its core experience should combine:
+
+- Persistent intelligent chat
+- Long-term user-controlled memory
+- Context-aware projects
+- Cloud computer operation
+- Browser-based task execution
+- Action Buttons
+- Custom Panels
+- Reusable Specialties
+- Scheduled Tasks
+- Google Workspace integrations
+- Microsoft 365 integrations
+- Encrypted Vault
+- Notifications
+- Secure approval workflows
+- Web application
+- Android application
+
+Design the architecture to support future AI models, additional tools, new integrations, additional languages, larger user volumes and future product capabilities without requiring a complete rewrite.
+
+FINAL INSTRUCTION:
+
+Begin with PHASE 0 and PHASE 1.
+
+Build a working foundation with original Buildlabs branding and a genuinely functional application.
+
+Preserve this specification as the project's master requirements document.
+
+Never sacrifice data security, correctness or maintainability to make the application appear more advanced than it actually is.
+
+PROJECT: BUILDLABS
+STATUS TARGET: PRODUCTION-READY
+PLATFORMS: WEB + ANDROID
+PRODUCT DIRECTION: HARK-STYLE INDEPENDENT AI AGENT PLATFORM

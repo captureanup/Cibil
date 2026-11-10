@@ -1,0 +1,6 @@
+{
+  "name": "BUILDLABS",
+  "description": "Intelligence That Gets Things Done — Hark-style personal AI assistant & autonomous agent platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
